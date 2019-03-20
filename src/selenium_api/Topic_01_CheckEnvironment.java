@@ -2,40 +2,48 @@ package selenium_api;
 
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-@Test
 public class Topic_01_CheckEnvironment {
-    WebDriver driver;
-	
-  @BeforeClass
-  public void beforeClass() {
-	  
-	  System.setProperty("webdriver.chrome.driver", ".//lib/chromedriver");
-	  driver = new ChromeDriver();
-	  
-	  //driver = new FirefoxDriver();
-	  driver.get("https://www.google.com/");
-	  driver.manage().window().maximize();
-	  driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-  }
+	WebDriver driver;
 
-  public void TC_01_CheckTitle() {
-	  String homePageTitle = driver.getTitle();
-	  Assert.assertEquals(homePageTitle, "Google");
-  }
-  
-  @AfterClass
-  public void afterClass() {
-	  driver.quit();
-	  
-  }
-  
+	@BeforeClass
+	public void beforeClass() {
+
+		driver = new FirefoxDriver();
+		driver.get("http://live.guru99.com/");
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	}
+
+	@Test
+	public void TC_01_CheckUrl() {
+		String homePageUrl = driver.getCurrentUrl();
+		Assert.assertEquals(homePageUrl, "http://live.guru99.com/");
+	}
+
+	@Test
+	public void TC_02_CheckTitle() {
+		String homePageTitle = driver.getTitle();
+		Assert.assertEquals(homePageTitle, "Home page");
+	}
+
+	@Test
+	public void TC_03_HomePageLogoDisplayed() {
+		WebElement homePageLogo = driver.findElement(By.xpath("//img[contains(@src, 'logo.png')]"));
+		Assert.assertTrue(homePageLogo.isDisplayed());
+	}
+	
+	@AfterClass
+	public void afterClass() {
+		driver.quit();
+	}
 
 }
