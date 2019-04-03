@@ -5,10 +5,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -101,7 +98,7 @@ public class Topic_02_Xpath_Css {
 		driver.findElement(By.xpath("//button[@title='Register']")).click();
 
 		String LoginSuccessMess = driver
-				.findElement(By.xpath("//span[contains(text(),'Thank you for registering with Main Website Store.')]"))
+				.findElement(By.xpath("//li[@class='success-msg']//span"))
 				.getText();
 		Assert.assertEquals(LoginSuccessMess, "Thank you for registering with Main Website Store.");
 

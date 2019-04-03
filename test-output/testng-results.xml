@@ -1,25 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="5504" started-at="2019-03-16T15:21:34Z" finished-at="2019-03-16T15:21:39Z">
+  <suite name="Default suite" duration-ms="19407" started-at="2019-04-03T15:14:46Z" finished-at="2019-04-03T15:15:05Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="5504" started-at="2019-03-16T15:21:34Z" finished-at="2019-03-16T15:21:39Z">
-      <class name="selenium_api.Topic_01_CheckEnvironment">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:selenium_api.Topic_01_CheckEnvironment@2eee9593]" name="beforeClass" is-config="true" duration-ms="5380" started-at="2019-03-16T22:21:34Z" finished-at="2019-03-16T22:21:39Z">
+    <test name="Default test" duration-ms="19407" started-at="2019-04-03T15:14:46Z" finished-at="2019-04-03T15:15:05Z">
+      <class name="selenium_api.Topic_04_Custom_DropdownList">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:selenium_api.Topic_04_Custom_DropdownList@7907ec20]" name="beforeClass" is-config="true" duration-ms="2935" started-at="2019-04-03T22:14:46Z" finished-at="2019-04-03T22:14:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="TC_01_CheckTitle()[pri:0, instance:selenium_api.Topic_01_CheckEnvironment@2eee9593]" name="TC_01_CheckTitle" duration-ms="18" started-at="2019-03-16T22:21:39Z" finished-at="2019-03-16T22:21:39Z">
+        <test-method status="PASS" signature="TC_01_Jquerry()[pri:0, instance:selenium_api.Topic_04_Custom_DropdownList@7907ec20]" name="TC_01_Jquerry" duration-ms="5529" started-at="2019-04-03T22:14:49Z" finished-at="2019-04-03T22:14:54Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_01_CheckTitle -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:selenium_api.Topic_01_CheckEnvironment@2eee9593]" name="afterClass" is-config="true" duration-ms="95" started-at="2019-03-16T22:21:39Z" finished-at="2019-03-16T22:21:39Z">
+        </test-method> <!-- TC_01_Jquerry -->
+        <test-method status="PASS" signature="TC_02_Angular()[pri:0, instance:selenium_api.Topic_04_Custom_DropdownList@7907ec20]" name="TC_02_Angular" duration-ms="10761" started-at="2019-04-03T22:14:54Z" finished-at="2019-04-03T22:15:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_02_Angular -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:selenium_api.Topic_04_Custom_DropdownList@7907ec20]" name="afterClass" is-config="true" duration-ms="170" started-at="2019-04-03T22:15:05Z" finished-at="2019-04-03T22:15:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- selenium_api.Topic_01_CheckEnvironment -->
+      </class> <!-- selenium_api.Topic_04_Custom_DropdownList -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
